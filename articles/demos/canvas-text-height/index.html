@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas text height</title>
+  <style>
+    body, html {
+      margin: 0;
+    }
+    .measure {
+      /* position: absolute; */
+      top: 300px;
+      left: 10px;
+      word-break: keep-all;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <canvas id="canvas" style="width: 100%;"></canvas>
+    <div class="measure" style="font-size: 40px;font-family: serif;line-height: 40px;">canvas text</div>
+  </div>
+  <script>
+    var fontSize = 40
+    var dpr = window.devicePixelRatio || 1
+    // var dpr = 1
+    function initPixel () {
+      var canvas = document.getElementById('canvas')
+      console.log('canvas', canvas.width, canvas.height, dpr)
+      canvas.width = canvas.width * dpr
+      canvas.height = canvas.height * dpr
+      var ctx = canvas.getContext('2d');
+      ctx.scale(dpr, dpr)
+    }
+    function draw() {
+      var ctx = document.getElementById('canvas').getContext('2d');
+      ctx.font = "40px serif";
+      var text = "canvas text"
+      ctx.fillText(text, 10, 50);
+      strokeTextRect(ctx, text)
+    }
+    function strokeTextRect(ctx, text) {
+      var textMetrics = ctx.measureText(text);
+      var height = document.querySelector('.measure').clientHeight / dpr
+      // height = fontSize / dpr
+      // dpr = 1
+      ctx.strokeStyle = 'red';
+      ctx.strokeRect(10, 50 - height, textMetrics.width, height);
+    }
+    window.onload = () => {
+      initPixel()
+      draw()
+    }
+  </script>
+</body>
+</html>
