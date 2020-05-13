@@ -5,15 +5,32 @@
   
 
   
-  <title>blog.baiwan.online</title>
+  <title>canvas文本高度 | blog.baiwan.online</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="blog.baiwan.online">
-<meta property="og:url" content="https://blog.baiwan.online/index.html">
+  <meta name="description" content="多看官方文档，拨云见日   在使用canvas绘制文本的时候，我们可能会需要知道文本的宽高，来达到给文本增加边框，或者确定相对位置。下面我们来一步步实现一个在文本绘制边框的例子。 初始化初始化canvas,首先在html中插入一个canvas节点。 1&lt;canvas id&#x3D;&quot;canvas&quot; style&#x3D;&quot;width: 100%;&quot;&gt;&lt;&#x2F;canvas&gt;  在绘图前，我们应该">
+<meta property="og:type" content="article">
+<meta property="og:title" content="canvas文本高度">
+<meta property="og:url" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/index.html">
 <meta property="og:site_name" content="blog.baiwan.online">
+<meta property="og:description" content="多看官方文档，拨云见日   在使用canvas绘制文本的时候，我们可能会需要知道文本的宽高，来达到给文本增加边框，或者确定相对位置。下面我们来一步步实现一个在文本绘制边框的例子。 初始化初始化canvas,首先在html中插入一个canvas节点。 1&lt;canvas id&#x3D;&quot;canvas&quot; style&#x3D;&quot;width: 100%;&quot;&gt;&lt;&#x2F;canvas&gt;  在绘图前，我们应该">
 <meta property="og:locale" content="cn">
+<meta property="og:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/header-bg.jpg">
+<meta property="og:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/blur.jpg">
+<meta property="og:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/uninit-pixel.png">
+<meta property="og:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/init-pixel.png">
+<meta property="og:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/fake-over.jpg">
+<meta property="og:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/surprise.jpg">
+<meta property="og:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/textmetrics-unsport.png">
+<meta property="og:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/height-1.png">
+<meta property="og:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/line-height.png">
+<meta property="og:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/renzhen.gif">
+<meta property="og:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/csswg_font-size.png">
+<meta property="og:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/papapa.gif">
+<meta property="article:published_time" content="2020-05-12T06:00:06.000Z">
+<meta property="article:modified_time" content="2020-05-13T07:22:55.995Z">
 <meta property="article:author" content="程序员的脑洞">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.baiwan.online/2020/05/12/canvas-text-height/header-bg.jpg">
   
     <link rel="alternate" href="/atom.xml" title="blog.baiwan.online" type="application/atom+xml">
   
@@ -62,9 +79,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-canvas-text-height" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-canvas-text-height" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/05/12/canvas-text-height/" class="article-date">
   <time datetime="2020-05-12T06:00:06.000Z" itemprop="datePublished">2020-05-12</time>
@@ -77,8 +92,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/12/canvas-text-height/">canvas文本高度</a>
+    <h1 class="article-title" itemprop="name">
+      canvas文本高度
     </h1>
   
 
@@ -159,11 +174,9 @@
     </footer>
   </div>
   
-</article>
-
-
+    
   
-
+</article>
 
 </section>
         
