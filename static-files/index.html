@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>blog.baiwan.online</title>
+  <style>
+    .mpcode-search {
+      margin: 0 auto;
+      width: 90%;
+      height: 300px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .flower-drawer {
+      background-image: url(./flower-drawer/mpcode-search@1x.jpg);
+    }
+    .photo-count {
+      background-image: url(./photo-count/mpcode-search@1x.jpg);
+    }
+  </style>
+</head>
+<body onload="onLoad()">
+  <div class="mpcodes">
+    <div class="mpcode-search flower-drawer"></div>
+    <div class="mpcode-search photo-count"></div>
+    <!-- <img src="./flower-drawer/mpcode-search@3x.jpg" width="100%"/> -->
+    <!-- <img src="./photo-count/mpcode-search.jpg" width="100%"/> -->
+  </div>
+  <script type="text/javascript">
+    console.log('onLoad')
+    function onLoad () {
+      console.log('onLoad')
+      loadHBg('.flower-drawer', './flower-drawer/mpcode-search@3x.jpg')
+      loadHBg('.photo-count', './photo-count/mpcode-search@3x.jpg')
+    }
+
+    function loadHBg (selector, imgSrc) {
+      var fdMPCodeImg = document.createElement('img')
+      fdMPCodeImg.onload = function () {
+        console.log('onload', fdMPCodeImg)
+        document.querySelector(selector).style.backgroundImage = 'url(' + fdMPCodeImg.src + ')'
+      }
+      fdMPCodeImg.src = imgSrc
+    }
+  </script>
+</body>
+</html>
